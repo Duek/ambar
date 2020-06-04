@@ -2,11 +2,13 @@ FROM node:10 AS builder
 
 COPY . /app
 
-ENV NODE_ENV='production'
-
 WORKDIR /app
 
-RUN npm install && npm run compile
+ENV NODE_ENV='production'
+
+RUN npm install
+
+RUN npm run compile
 
 FROM nginx:latest
 
