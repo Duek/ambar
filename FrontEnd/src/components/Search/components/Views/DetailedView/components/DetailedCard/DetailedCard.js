@@ -78,8 +78,9 @@ class DetailedCard extends Component {
                             performSearchByTag={performSearchByTag}
                             suggestions={allTags.map(t => t.name)}
                         />
-                        <div className={classes.searchResultRowCardTextContainer}>
-                          <div className={classes.searchResultRowCardTextContainer + ( this.state.rtl ? " " + classes.rtl : "" )}>
+
+                      <div className={classes.searchResultRowCardTextContainer + ( this.state.rtl ? " " + classes.rtl : "" )}>
+                            <div className={classes.searchResultRowCardTextDiv}>
                                 {fetching && <CardText>
                                     <LoadingIndicator />
                                 </CardText>
