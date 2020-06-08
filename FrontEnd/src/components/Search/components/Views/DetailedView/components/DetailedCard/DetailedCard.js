@@ -79,7 +79,7 @@ class DetailedCard extends Component {
                             suggestions={allTags.map(t => t.name)}
                         />
                         <div className={classes.searchResultRowCardTextContainer}>
-                            <div className={classes.searchResultRowCardTextDiv}>
+                          <div className={classes.searchResultRowCardTextContainer + ( this.state.rtl ? " " + classes.rtl : "" )}>
                                 {fetching && <CardText>
                                     <LoadingIndicator />
                                 </CardText>
