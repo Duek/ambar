@@ -6,6 +6,8 @@ import MediaQuery from 'react-responsive'
 import Paper from 'material-ui/Paper'
 import { Divider, FlatButton } from 'material-ui'
 import FileDownloadIcon from 'material-ui/svg-icons/file/file-download'
+import ArrowLeftIcon from 'material-ui/svg-icons/navigation/chevron-left';
+import ArrowRightIcon from 'material-ui/svg-icons/navigation/chevron-right';
 import DeleteIcon from 'material-ui/svg-icons/action/delete'
 import UndoIcon from 'material-ui/svg-icons/content/undo'
 import DetailedCardHeader from './components/DetailedCardHeader'
@@ -19,7 +21,14 @@ class DetailedCard extends Component {
         loadHighlight(fileId, searchQuery)
     }
 
-    render() {
+  constructor (props){
+    super(props);
+    const {content: content} = props
+    let rtl = false
+    this.state = {rtl}
+  }
+
+  render() {
         const {
             hit: {
                 fetching: fetching,
@@ -108,9 +117,15 @@ class DetailedCard extends Component {
                                     title={localization.searchPage.downloadDescriptionLabel}
                                     primary={true}
                                     onTouchTap={() => { window.open(downloadUri) }}
-                                />                                                  
+                                />
                             </div>}
-                            <div>
+                          <FlatButton
+                            primary={true}
+                            icon={this.state.rtl ? <ArrowLeftIcon /> : <ArrowRightIcon />}
+                            onClick={() => this.setState({rtl: !this.state.rtl})}>
+                            {this.state.rtl ? "LTR" : "RTL"}
+                          </FlatButton>
+                          <div>
                                 {!hidden_mark && <FlatButton
                                     icon={<DeleteIcon />}
                                     secondary={true}
@@ -118,7 +133,7 @@ class DetailedCard extends Component {
                                     title={localization.searchPage.removeDescriptionLabel}
                                     style={{ color: 'grey' }}
                                     onTouchTap={() => hideFile(fileId)}
-                                />}                                
+                                />}
                             </div>
                         </div>}
                     </CardActions>

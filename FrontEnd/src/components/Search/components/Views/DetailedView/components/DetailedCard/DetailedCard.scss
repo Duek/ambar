@@ -17,13 +17,17 @@
     }
 }
 
+.rtl {
+  direction: rtl
+}
+
 .searchResultRowCardTextDiv {
     width: 100%;
     word-wrap: break-word;
     word-break: break-word;
 }
 
-.searchResultRowCardTextWithBorder {    
+.searchResultRowCardTextWithBorder {
     border-bottom: 1px solid #eeeeee;
 }
 
@@ -32,7 +36,7 @@
 }
 
 .searchResultRowCardTextThumbnailImage {
-    max-width: 250px;    
+    max-width: 250px;
 }
 
 .searchResultRowCardTextThumbnailImage:hover {
@@ -47,14 +51,14 @@
     overflow: hidden;
 }
 
-.blurred {    
+.blurred {
     -webkit-filter: blur(3px);
     filter: blur(3px);
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-    -khtml-user-select: none; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none; 
-     user-select: none; 
+    -ms-user-select: none;
+     user-select: none;
 }
 
