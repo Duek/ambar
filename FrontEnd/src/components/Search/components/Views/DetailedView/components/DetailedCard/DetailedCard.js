@@ -24,7 +24,7 @@ class DetailedCard extends Component {
   constructor (props){
     super(props);
     const {content: content} = props
-    let rtl = false
+    let rtl = true
     this.state = {rtl}
   }
 
