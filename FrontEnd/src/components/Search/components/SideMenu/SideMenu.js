@@ -33,14 +33,14 @@ class SideMenu extends Component {
 
         return (
             <div className={classes.sideMenuContainer}>
-                <RaisedButton
-                    label={localization.searchPage.uploadLabel}
-                    style={{ margin: '-2px 16px 16px 16px' }}
-                    labelColor={'#00bcd4'}
-                    backgroundColor={'#ffffff'}
-                    icon={<UploadFileIcon />}
-                    onTouchTap={toggleUploadModal}
-                />
+                {/*<RaisedButton*/}
+                {/*    label={localization.searchPage.uploadLabel}*/}
+                {/*    style={{ margin: '-2px 16px 16px 16px' }}*/}
+                {/*    labelColor={'#00bcd4'}*/}
+                {/*    backgroundColor={'#ffffff'}*/}
+                {/*    icon={<UploadFileIcon />}*/}
+                {/*    onTouchTap={toggleUploadModal}*/}
+                {/*/>*/}
                 <Divider style={{ marginBottom: '10px' }} />
                 <MenuLabel>{localization.searchPage.viewLabel}</MenuLabel>
                 <List>
